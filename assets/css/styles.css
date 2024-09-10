@@ -1,229 +1,48 @@
-/* General */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa;
-    color: #333;
-}
+*{
+    margin: 0 auto;
+    outline: 0;
+    box-sizing: border-box;
 
-a {
-    color: #1D0748;
+}
+body{
+    font-family: sans-serif;
+}
+a{
     text-decoration: none;
 }
-
-a:hover {
-    color: #4C00D7;
-    text-decoration: underline;
+a:hover{
+    text-decoration: none;
 }
-
-/* Top Bar */
-.top-bar {
-    background-color: #1D0748;
-    color: #fff;
-    font-size: 14px;
-}
-
-.top-bar a {
-    color: #f1f1f1;
-}
-
-.top-bar a:hover {
-    color: #ffc107;
-}
-
-/* Middle Bar */
-.middle-bar {
-    background-color: #ffffff;
-    border-bottom: 2px solid #f1f1f1;
-}
-
-.middle-bar img {
-    width: 180px;
-    height: auto;
-}
-
-.middle-bar form {
-    display: flex;
-    gap: 10px;
-}
-
-.middle-bar input[type="text"] {
-    border: 2px solid #ddd;
-    border-radius: 30px;
-    padding: 10px;
-}
-
-.middle-bar select {
-    border-radius: 30px;
-    padding: 10px;
-}
-
-.middle-bar .btn {
-    border-radius: 30px;
-    padding: 10px 20px;
-    background-color: #4C00D7;
-    color: white;
-    border: none;
-}
-
-.middle-bar .btn:hover {
-    background-color: #1D0748;
-}
-
-/* Navbar */
-.navbar-light .navbar-nav .nav-link {
-    color: #333;
-    font-weight: 500;
-}
-
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #4C00D7;
-}
-
-.navbar-light .navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #4C00D7;
-}
-
-.navbar-light .navbar-brand:hover {
-    color: #1D0748;
-}
-
-/* Hero Section */
-#heroCarousel .carousel-inner img {
-    max-height: 600px;
-    object-fit: cover;
-}
-
-/* Top Categories */
-.top-categories h2 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bold;
-    color: #4C00D7;
-}
-
-.category-box {
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.category-box img {
+img{
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
-.category-box h5 {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-}
-
-.category-box:hover {
-    transform: scale(1.05);
-}
-
-/* Products Section */
-.product-card {
-    transition: transform 0.3s;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.product-card img {
-    border-radius: 10px 10px 0 0;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-}
-
-.card-body h5 {
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-.card-body .btn {
-    border-radius: 30px;
-}
-
-.card-body .btn-primary {
-    background-color: #4C00D7;
-    border: none;
-}
-
-.card-body .btn-outline-secondary {
-    color: #4C00D7;
-    border: 1px solid #4C00D7;
-}
-
-.card-body .btn:hover {
-    opacity: 0.8;
-}
-
-/* Footer */
-.footer {
-    background-color: #1D0748;
-}
-
-.footer p {
+ul{
+    padding: 0;
     margin: 0;
-    font-size: 14px;
-    color: #f1f1f1;
+}
+li{
+    list-style-type: none;
+}
+/* header area */
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    color: black;
+    
 }
 
-/* Cart Sidebar */
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #f1f1f1;
-    display: block;
-    transition: 0.3s;
-}
-
-.sidenav a:hover {
-    color: #ffc107;
-}
-
-.sidenav .closebtn {
+.submenu{
+    display: none;
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+    background: green;
 }
-
-/* Responsive */
-@media (max-width: 768px) {
-    .middle-bar img {
-        width: 120px;
-    }
-
-    .middle-bar form {
-        flex-direction: column;
-    }
-
-    .middle-bar .btn {
-        margin-top: 10px;
-    }
+.menu-item:hover{
+    color: red;
+}
+.menu-item:hover .submenu{
+    display: block;
 }
