@@ -99,6 +99,16 @@
         }
         button.parent().parent().find('input').val(newVal);
     });
+
+
+    // $(window).on('scroll', function() {
+    //     if ($(this).scrollTop() > 30) {
+    //         $('.navbar').addClass('sticky');
+    //     } else {
+    //         $('.navbar').removeClass('sticky');
+    //     }
+    // });
+    
     
 })(jQuery);
 
