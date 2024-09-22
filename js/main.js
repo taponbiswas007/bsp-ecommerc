@@ -102,7 +102,7 @@
 
 
     $(window).on('scroll', function() {
-        if ($(this).scrollTop() > 150) {
+        if ($(this).scrollTop() > 200) {
             $('.middlenavbar').addClass('sticky');
         } else {
             $('.middlenavbar').removeClass('sticky');

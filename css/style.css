@@ -9682,13 +9682,14 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 3px 7px;
   font-size: 12px;
 }
+.middlenavbar{
+  transition: all .6s ease;
+}
 .stickybar{
 top: -100%;
 position: fixed;
 }
 .sticky {
-  transition: all .3s ease-in;
-  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
