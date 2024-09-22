@@ -101,13 +101,13 @@
     });
 
 
-    // $(window).on('scroll', function() {
-    //     if ($(this).scrollTop() > 30) {
-    //         $('.navbar').addClass('sticky');
-    //     } else {
-    //         $('.navbar').removeClass('sticky');
-    //     }
-    // });
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 150) {
+            $('.middlenavbar').addClass('sticky');
+        } else {
+            $('.middlenavbar').removeClass('sticky');
+        }
+    });
 
 
     // slick slider
