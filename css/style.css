@@ -4511,7 +4511,7 @@ input[type="button"].btn-block {
 }
 
 .hover-link:hover {
-  color: #ff6f61;
+  color: #ffffff;
 }
 
 .hover-link::after {
@@ -4519,7 +4519,7 @@ input[type="button"].btn-block {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #ff6f61;
+  background-color: #ffffff;
   left: 0;
   bottom: -2px;
   transform: scaleX(0);
@@ -9696,7 +9696,7 @@ a.text-dark:hover, a.text-dark:focus {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #f6f4f9;
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
@@ -9710,7 +9710,16 @@ a.text-dark:hover, a.text-dark:focus {
   height: 250px;
   overflow: hidden;
 }
-
+.card-footer-area{
+  bottom: -100%;
+  left: 0;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+  transition: all 0.5s ease;
+  background: #fba504;
+  border-radius: 7px 7px 0 0 !important;
+}
 .product-image img {
   transition: opacity 0.5s ease;
   width: 100%;
@@ -9728,9 +9737,12 @@ a.text-dark:hover, a.text-dark:focus {
 .product-card:hover .hover-img {
   opacity: 1;
 }
+.product-card:hover .card-footer-area {
+  bottom: 0;
+}
 
 .product-info {
-  padding: 15px;
+  padding:5px 10px 15px 10px;
 }
 
 .product-title {
@@ -9766,7 +9778,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .product-rating {
-  margin: 8px 0;
+ 
+ 
 }
 
 .star {
