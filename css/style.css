@@ -9820,51 +9820,29 @@ a.text-dark:hover, a.text-dark:focus {
 /* Styling the top-right bar */
 .top-right-bar {
   position: fixed;
-  top: 10px;  /* Always 10px from the top */
-  right: 20px;  /* Always 20px from the right edge */
+  top: 10px;  
+  right: 10px;  
   display: flex;
   align-items: center;
   z-index: 1000;
-  background-color: #ffffff;  /* White background for bar */
-  padding: 10px;
+  background-color: #ffffff;
+  padding: 8px;
   border-radius: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Soft shadow for bar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-family: Arial, sans-serif;
 }
 
 .top-right-bar a {
   text-decoration: none;
-  color: #4C00D7;  /* Primary icon color */
-  margin-left: 20px;
+  color: #4C00D7;  
+  margin-left: 15px;  /* Reduced spacing for smaller screens */
   position: relative;
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;  /* Smaller font size for small screens */
   font-weight: 500;
   transition: all 0.3s ease;
-}
-
-.top-right-bar a i {
-  font-size: 22px;
-  margin-right: 5px;
-  transition: all 0.3s ease;
-}
-
-.top-right-bar a:hover i {
-  transform: scale(1.2);  /* Scale icon on hover */
-}
-
-/* Badge styling for cart and favorite icons */
-.top-right-bar a .badge {
-  position: absolute;
-  top: -5px;
-  right: -10px;
-  background-color: red;  /* Badge background color */
-  color: white;
-  padding: 3px 7px;
-  border-radius: 50%;
-  font-size: 12px;
-  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
 }
 
 /* Cart Icon */
@@ -9896,27 +9874,48 @@ a.text-dark:hover, a.text-dark:focus {
 .top-right-bar .search-icon i {
   color: #333; /* Dark search icon */
 }
+.top-right-bar a i {
+  font-size: 20px;  /* Adjusted icon size for smaller screens */
+  margin-right: 3px;
+  transition: all 0.3s ease;
+}
+
+.top-right-bar a:hover i {
+  transform: scale(1.2);  
+}
+
+.top-right-bar a .badge {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: bold;
+}
 
 /* Search container styling */
 .search-container {
   position: fixed;
-  top: 50px;
-  right: 20px;
-  width: 250px;
-  padding: 10px;
+  top: 60px;
+  right: 10px;  /* Adjusted for smaller screens */
+  width: 220px;  /* Slightly reduced width */
+  padding: 8px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: none; /* Hidden by default */
-  z-index: 1001; /* Above everything else */
+  display: none;
+  z-index: 1001;
 }
 
 .search-container input {
   width: 100%;
-  padding: 8px;
+  padding: 6px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #search-results {
@@ -9938,6 +9937,38 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #f0f0f0;
 }
 
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .top-right-bar {
+      top: 5px;
+      right: 5px;
+      padding: 6px;  /* Smaller padding */
+      border-radius: 20px;
+  }
+
+  .top-right-bar a {
+      margin-left: 10px;  /* Reduced spacing between icons */
+      font-size: 14px;  /* Smaller font for tiny screens */
+  }
+
+  .top-right-bar a i {
+      font-size: 18px;  /* Smaller icons */
+  }
+
+  .search-container {
+      width: 180px;  /* Reduced width for small screens */
+      top: 50px;
+      right: 5px;
+  }
+
+  .search-container input {
+      font-size: 12px;  /* Smaller font size for search input */
+  }
+
+  #search-results div {
+      font-size: 12px;  /* Smaller font for search results */
+  }
+}
 
 
 
