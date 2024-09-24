@@ -4729,7 +4729,8 @@ a.badge:hover, a.badge:focus {
 
 .btn .badge {
   position: relative;
-  top: -1px;
+  top: -14px;
+  right: 7px;
 }
 
 .badge-pill {
@@ -9655,7 +9656,7 @@ a.text-dark:hover, a.text-dark:focus {
 .icon-btn {
   position: relative;
   display: inline-block;
-  padding: 10px 15px;
+  padding: 15px 10px 0px 10px;
   border-radius: 50px;
   background-color: #ffffff;
   transition: all 0.3s ease-in-out;
@@ -9676,26 +9677,32 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #ff4757;
+  background-color: #35d128;
   color: white;
   border-radius: 50%;
-  padding: 3px 7px;
   font-size: 12px;
 }
 .middlenavbar{
-  transition: all .6s ease;
+  /* transition: all .6s ease; */
 }
-.stickybar{
-top: -100%;
-position: fixed;
-}
+
 .sticky {
+  position: fixed;
   top: 0;
-  left: 0;
+  left: 15px;
   width: 100%;
   z-index: 99;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  animation: sticky .4s ease;
+}
+@keyframes sticky {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
 }
 
 /* new cart design */
@@ -9804,4 +9811,8 @@ position: fixed;
   transition: transform 0.3s ease;
 }
 
-
+.search-area{
+  border: 2px solid #010101;
+  border-radius: 10px;
+  overflow: hidden;
+}
