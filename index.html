@@ -31,6 +31,51 @@
 </head>
 
 <body>
+    <!-- top right bar start -->
+    <div class="top-right-bar">
+        <!-- Cart Icon with Badge -->
+        <a href="#" class="cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="badge">3</span>
+        </a>
+    
+        <!-- Favorite Icon with Badge -->
+        <a href="#" class="favorite">
+            <i class="fas fa-heart"></i>
+            <span class="badge">5</span>
+        </a>
+    
+        <!-- Login Link with Icon -->
+        <a href="#" class="login">
+            <i class="fas fa-sign-in-alt"></i>
+            <span>Login</span>
+        </a>
+    
+        <!-- Signup Link with Icon -->
+        <a href="#" class="signup">
+            <i class="fas fa-user-plus"></i>
+            <span>Signup</span>
+        </a>
+    
+        <!-- Profile Link with Icon -->
+        <a href="#" class="profile">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </a>
+    
+        <!-- Search Icon -->
+        <a href="#" class="search-icon" onclick="toggleSearch()">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+    
+    <!-- Search Input and Results (initially hidden) -->
+    <div id="search-container" class="search-container">
+        <input type="text" id="search-input" placeholder="Search..." oninput="searchData(this.value)">
+        <div id="search-results"></div>
+    </div>
+    
+    <!-- top right bar end -->
     <!-- Topbar Start -->
 
    

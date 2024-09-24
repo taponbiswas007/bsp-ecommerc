@@ -9817,6 +9817,131 @@ a.text-dark:hover, a.text-dark:focus {
   overflow: hidden;
 }
 
+/* Styling the top-right bar */
+.top-right-bar {
+  position: fixed;
+  top: 10px;  /* Always 10px from the top */
+  right: 20px;  /* Always 20px from the right edge */
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  background-color: #ffffff;  /* White background for bar */
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Soft shadow for bar */
+  font-family: Arial, sans-serif;
+}
+
+.top-right-bar a {
+  text-decoration: none;
+  color: #4C00D7;  /* Primary icon color */
+  margin-left: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.top-right-bar a i {
+  font-size: 22px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.top-right-bar a:hover i {
+  transform: scale(1.2);  /* Scale icon on hover */
+}
+
+/* Badge styling for cart and favorite icons */
+.top-right-bar a .badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;  /* Badge background color */
+  color: white;
+  padding: 3px 7px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Cart Icon */
+.top-right-bar .cart i {
+  color: #4CAF50; /* Green cart color */
+}
+
+/* Favorite Icon */
+.top-right-bar .favorite i {
+  color: #FF4081; /* Pink favorite color */
+}
+
+/* Login Icon */
+.top-right-bar .login i {
+  color: #4C00D7; /* Primary color */
+}
+
+/* Signup Icon */
+.top-right-bar .signup i {
+  color: #009688; /* Teal signup color */
+}
+
+/* Profile Icon */
+.top-right-bar .profile i {
+  color: #FF9800; /* Orange profile color */
+}
+
+/* Search Icon */
+.top-right-bar .search-icon i {
+  color: #333; /* Dark search icon */
+}
+
+/* Search container styling */
+.search-container {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 250px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Hidden by default */
+  z-index: 1001; /* Above everything else */
+}
+
+.search-container input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#search-results {
+  margin-top: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#search-results div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#search-results div:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+
 /* General style for the container */
 .social-icons {
   position: fixed;

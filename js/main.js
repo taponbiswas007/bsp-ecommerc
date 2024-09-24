@@ -150,3 +150,40 @@
     
 })(jQuery);
 
+
+
+// Function to toggle search input visibility
+function toggleSearch() {
+    var searchContainer = document.getElementById('search-container');
+    if (searchContainer.style.display === 'none' || searchContainer.style.display === '') {
+        searchContainer.style.display = 'block';
+    } else {
+        searchContainer.style.display = 'none';
+    }
+}
+
+// Function to dynamically update search results
+function searchData(query) {
+    var resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = ''; // Clear previous results
+    
+    // Sample data array for search suggestions
+    var data = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape', 'Honeydew'];
+
+    if (query.length > 0) {
+        var filteredData = data.filter(function(item) {
+            return item.toLowerCase().includes(query.toLowerCase());
+        });
+
+        // Display filtered data as search results
+        filteredData.forEach(function(item) {
+            var resultDiv = document.createElement('div');
+            resultDiv.innerHTML = item;
+            resultDiv.onclick = function() {
+                document.getElementById('search-input').value = item;
+                resultsContainer.innerHTML = ''; // Clear results after selecting
+            };
+            resultsContainer.appendChild(resultDiv);
+        });
+    }
+}
