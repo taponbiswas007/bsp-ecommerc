@@ -9859,6 +9859,39 @@ a.text-dark:hover, a.text-dark:focus {
   border: none;
 }
 
+/* top offer area start */
+.ads-and-offer{
+  height: 60px;
+  background: url(/img/offer-bg.png);
+  background-position: center;
+}
+.ads-and-offer p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 0;
+
+}
+.ads-and-offer h1{
+  font-family: "Open Sans", sans-serif;
+  font-size: 53px;
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-style: italic;
+}
+.ads-and-offer h2{
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 0;
+  -webkit-text-stroke: 0.7px #ffffff;
+}
+/* top offer area end */
+
+
 /* Cart Icon */
 .top-right-bar .cart i {
   color: #4CAF50; /* Green cart color */
