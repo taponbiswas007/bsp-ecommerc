@@ -9844,6 +9844,20 @@ a.text-dark:hover, a.text-dark:focus {
   transition: all 0.3s ease;
   font-family: "Open Sans", sans-serif;
 }
+.top-right-bar button {
+  text-decoration: none;
+  color: #4C00D7;  
+  margin-left: 15px;  /* Reduced spacing for smaller screens */
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 16px;  /* Smaller font size for small screens */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: "Open Sans", sans-serif;
+  background: none;
+  border: none;
+}
 
 /* Cart Icon */
 .top-right-bar .cart i {
@@ -9881,6 +9895,9 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .top-right-bar a:hover i {
+  transform: scale(1.2);  
+}
+.top-right-bar button:hover i {
   transform: scale(1.2);  
 }
 
