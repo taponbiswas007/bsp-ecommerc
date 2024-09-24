@@ -9816,3 +9816,78 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 10px;
   overflow: hidden;
 }
+
+/* General style for the container */
+.social-icons {
+  position: fixed;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.social-icons a {
+  margin: 5px 0;
+  padding: 3px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 17px;
+  transition: all 0.3s ease;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adding shadow effect */
+}
+
+/* Facebook Icon */
+.social-icons .facebook {
+  background-color: #1877F2; /* Facebook blue */
+}
+
+.social-icons .facebook:hover {
+  background-color: #145db7;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+/* Twitter Icon */
+.social-icons .twitter {
+  background-color: #1DA1F2; /* Twitter blue */
+}
+
+.social-icons .twitter:hover {
+  background-color: #0d8ddb;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+/* LinkedIn Icon */
+.social-icons .linkedin {
+  background-color: #0077B5; /* LinkedIn blue */
+}
+
+.social-icons .linkedin:hover {
+  background-color: #005582;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+/* Instagram Icon */
+.social-icons .instagram {
+  background-color: #E1306C; /* Instagram gradient color */
+}
+
+.social-icons .instagram:hover {
+  background-color: #b12254;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
+
+/* YouTube Icon */
+.social-icons .youtube {
+  background-color: #FF0000; /* YouTube red */
+}
+
+.social-icons .youtube:hover {
+  background-color: #cc0000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
+}
