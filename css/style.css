@@ -9933,6 +9933,11 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 3px;
   transition: all 0.3s ease;
 }
+.top-right-bar button i {
+  font-size: 20px;  /* Adjusted icon size for smaller screens */
+  margin-right: 3px;
+  transition: all 0.3s ease;
+}
 
 .top-right-bar a:hover i {
   transform: scale(1.2);  
