@@ -10129,7 +10129,5 @@ a.text-dark:hover, a.text-dark:focus {
   background: #ffffff;
   display: none;
 }
-.nav-item:hover .dropdown-menu-area {
-  display: block;
-}
+
 
