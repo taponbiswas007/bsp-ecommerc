@@ -10124,3 +10124,85 @@ a.text-dark:hover, a.text-dark:focus {
   background: #0077B5;
   color: #ffffff;
 }
+
+/* offer box  */
+
+/* Main Offer Banner Styling */
+.new-offer-banner {
+  position: relative;
+  background-image: url('../img/offer-2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Overlay for contrast */
+.new-offer-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+  z-index: 0;
+}
+
+/* Content box styling */
+.new-offer-content {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent box */
+  padding: 2rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Headings Styling */
+.new-offer-content h5 {
+  font-size: 1.5rem;
+  color: #ffd700; /* Gold color for the small heading */
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.new-offer-content h1 {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); /* Soft text glow */
+}
+
+/* Button Styling */
+.new-btn-shop {
+  padding: 0.75rem 2rem;
+  background-color: #ff4500;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(255, 69, 0, 0.5); /* Subtle shadow */
+}
+
+/* Button Hover Animation */
+.new-btn-shop:hover {
+  background-color: #e63946;
+  box-shadow: 0px 6px 15px rgba(255, 69, 0, 0.7); /* Stronger shadow on hover */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+
