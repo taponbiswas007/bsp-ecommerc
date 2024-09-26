@@ -10120,14 +10120,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /* manu area */
-.dropdown-menu-area{
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 9;
-  background: #ffffff;
-  display: none;
+.dropdown-menu a:hover{
+  background: #0077B5;
+  color: #ffffff;
 }
-
-
