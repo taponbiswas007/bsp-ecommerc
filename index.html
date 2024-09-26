@@ -1,849 +1,1182 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>BSP E-Commerce</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Free HTML Templates" name="keywords" />
+    <meta content="Free HTML Templates" name="description" />
 
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon">
+    <link href="img/logo.png" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <!-- slick slider -->
-    <link rel="stylesheet" href="lib/slick/slick-theme.css">
-    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css" />
+    <link rel="stylesheet" href="lib/slick/slick.css" />
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- top right bar start -->
     <div class="top-right-bar">
-        <!-- Cart Icon with Badge -->
-        <a href="#" class="cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="badge">3</span>
-        </a>
+      <!-- Cart Icon with Badge -->
+      <a href="#" class="cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="badge">3</span>
+      </a>
 
-        <!-- Favorite Icon with Badge -->
-        <a href="#" class="favorite">
-            <i class="fas fa-heart"></i>
-            <span class="badge">5</span>
-        </a>
+      <!-- Favorite Icon with Badge -->
+      <a href="#" class="favorite">
+        <i class="fas fa-heart"></i>
+        <span class="badge">5</span>
+      </a>
 
-        <!-- Login Link with Icon -->
-        <a href="#" class="login">
-            <i class="fas fa-sign-in-alt"></i>
-            <span>Login</span>
-        </a>
+      <!-- Login Link with Icon -->
+      <a href="#" class="login">
+        <i class="fas fa-sign-in-alt"></i>
+        <span>Login</span>
+      </a>
 
-        <!-- Signup Link with Icon -->
-        <a href="#" class="signup">
-            <i class="fas fa-user-plus"></i>
-            <span>Signup</span>
-        </a>
+      <!-- Signup Link with Icon -->
+      <a href="#" class="signup">
+        <i class="fas fa-user-plus"></i>
+        <span>Signup</span>
+      </a>
 
-        <!-- Profile Link with Icon -->
-        <a href="#" class="profile">
-            <i class="fas fa-user"></i>
-            <span>Profile</span>
-        </a>
+      <!-- Profile Link with Icon -->
+      <a href="#" class="profile">
+        <i class="fas fa-user"></i>
+        <span>Profile</span>
+      </a>
 
-        <!-- Search Icon -->
-        <button class="search-icon" onclick="toggleSearch()">
-            <i class="fas fa-search"></i>
-        </button>
+      <!-- Search Icon -->
+      <button class="search-icon" onclick="toggleSearch()">
+        <i class="fas fa-search"></i>
+      </button>
     </div>
 
     <!-- Search Input and Results (initially hidden) -->
     <div id="search-container" class="search-container">
-        <input type="text" id="search-input" placeholder="Search..." oninput="searchData(this.value)">
-        <div id="search-results"></div>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search..."
+        oninput="searchData(this.value)"
+      />
+      <div id="search-results"></div>
     </div>
 
     <!-- top right bar end -->
     <!-- Topbar Start -->
 
-
-    <div class="container-fluid p-0 ">
-        <div class="ads-and-offer">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center justify-content-start">
-                    <p>Save up to</p>
-                    <h1>25%</h1>
-                    <h2>black hollyday</h2>
-                </div>
-
-            </div>
+    <div class="container-fluid p-0">
+      <div class="ads-and-offer">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center justify-content-start">
+            <p>Save up to</p>
+            <h1>25%</h1>
+            <h2>black hollyday</h2>
+          </div>
         </div>
-
+      </div>
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid">
-        <div class="row border-top px-xl-5">
-            <div class="col-lg-3 d-none d-lg-block">
-                <a href="" class="text-decoration-none logo">
-                    <img class="m-0" src="img/logo.png" alt="">
-                </a>
-            </div>
-            <div class="col-lg-9">
-                <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">
-                    <a href="" class="logo text-decoration-none d-block d-lg-none">
-                        <img src="img/logo.png" alt="">
-                    </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                        <div class="navbar-nav mr-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <!-- electric menu area start -->
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Electric</a>
-
-
-                                <div class="dropdown-menu rounded-0 m-0 p-2 shadow-lg"
-                                    style="width: max-content; background-color: #f8f9fa; border: none;">
-                                    
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-bolt me-2"></i> Super Enamel Wire
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-cable-car me-2"></i> Cables
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-stream me-2"></i> Resistance Wire
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-fill-drip me-2"></i> Varnish
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-tube me-2"></i> Amper Tube
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-cogs me-2"></i> Bearings
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-battery-full me-2"></i> Capacitors
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-ruler-combined me-2"></i> Insulation Materials
-                                            </a>
-                                       
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-broadcast-tower me-2"></i> Transformers
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-microchip me-2"></i> Circuit Boards
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-tools me-2"></i> Tools & Equipment
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-lightbulb me-2"></i> Lighting Solutions
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-plug me-2"></i> Electrical Components
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-solar-panel me-2"></i> Solar Equipment
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-box-open me-2"></i> Others
-                                            </a>
-                                       
-
-
-                                </div>
-
-
-                            </div>
-                            <!-- electric menu area end -->
-
-                            <!-- electronics menu area start -->
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Electronics</a>
-
-
-                                <div class="dropdown-menu rounded-0 m-0 p-2 shadow-lg"
-                                    style="width: max-content; background-color: #f8f9fa; border: none;">
-
-                                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                        <i class="fas fa-mobile-alt me-2"></i> Mobile Devices
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                        <i class="fas fa-watch me-2"></i> Wearables
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                        <i class="fas fa-tv me-2"></i> TVs, Set Top Boxes, Monitors
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                        <i class="fas fa-laptop me-2"></i> Laptops, Tablets, Computers
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                        <i class="fas fa-refrigerator me-2"></i> Appliances & White Goods
-                                    </a>
-                                    <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                        <i class="fas fa-desktop me-2"></i> Computers, Printers, Scanners
-                                    </a>
-
-                                </div>
-
-
-
-                            </div>
-                            <!-- electronics menu area end -->
-
-                            <!-- fashion menu start -->
-                         
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Fashions</a>
-                                <div class="dropdown-menu rounded-0 m-0 p-2 shadow-lg"
-                                    style="width: max-content; background-color: #f8f9fa; border: none;">
-                                    <div class="row">
-                                        <div class="col-12 col-md-6">
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-tshirt me-2"></i> Men's Clothing
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-female me-2"></i> Women's Clothing
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-child me-2"></i> Kids' Clothing
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-shoe-prints me-2"></i> Footwear
-                                            </a>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-hat-cowboy me-2"></i> Accessories
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-glasses me-2"></i> Eyewear
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-watch me-2"></i> Watches
-                                            </a>
-                                            <a href="#" class="dropdown-item d-flex align-items-center py-2">
-                                                <i class="fas fa-gem me-2"></i> Jewelry
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- fashion menu end -->
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                                    <a href="checkout.html" class="dropdown-item">Checkout</a>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        </div>
-                    </div>
-                </nav>
-
-            </div>
+      <div class="row border-top px-xl-5">
+        <div class="col-lg-3 d-none d-lg-block">
+          <a href="" class="text-decoration-none logo">
+            <img class="m-0" src="img/logo.png" alt="" />
+          </a>
         </div>
+        <div class="col-lg-9">
+          <nav
+            class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0"
+          >
+            <a href="" class="logo text-decoration-none d-block d-lg-none">
+              <img src="img/logo.png" alt="" />
+            </a>
+            <button
+              type="button"
+              class="navbar-toggler"
+              data-toggle="collapse"
+              data-target="#navbarCollapse"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarCollapse"
+            >
+              <div class="navbar-nav mr-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <!-- electric menu area start -->
+                <div class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    >Electric</a
+                  >
+
+                  <div
+                    class="dropdown-menu rounded-0 m-0 p-2 shadow-lg"
+                    style="
+                      width: max-content;
+                      background-color: #f8f9fa;
+                      border: none;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-bolt me-2"></i> Super Enamel Wire
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-cable-car me-2"></i> Cables
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-stream me-2"></i> Resistance Wire
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-fill-drip me-2"></i> Varnish
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-tube me-2"></i> Amper Tube
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-cogs me-2"></i> Bearings
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-battery-full me-2"></i> Capacitors
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-ruler-combined me-2"></i> Insulation
+                      Materials
+                    </a>
+
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-broadcast-tower me-2"></i> Transformers
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-microchip me-2"></i> Circuit Boards
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-tools me-2"></i> Tools & Equipment
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-lightbulb me-2"></i> Lighting Solutions
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-plug me-2"></i> Electrical Components
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-solar-panel me-2"></i> Solar Equipment
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-box-open me-2"></i> Others
+                    </a>
+                  </div>
+                </div>
+                <!-- electric menu area end -->
+
+                <!-- electronics menu area start -->
+                <div class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    >Electronics</a
+                  >
+
+                  <div
+                    class="dropdown-menu rounded-0 m-0 p-2 shadow-lg"
+                    style="
+                      width: max-content;
+                      background-color: #f8f9fa;
+                      border: none;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-mobile-alt me-2"></i> Mobile Devices
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-watch me-2"></i> Wearables
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-tv me-2"></i> TVs, Set Top Boxes,
+                      Monitors
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-laptop me-2"></i> Laptops, Tablets,
+                      Computers
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-refrigerator me-2"></i> Appliances &
+                      White Goods
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-desktop me-2"></i> Computers, Printers,
+                      Scanners
+                    </a>
+                  </div>
+                </div>
+                <!-- electronics menu area end -->
+
+                <!-- fashion menu start -->
+
+                <div class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    >Fashions</a
+                  >
+                  <div
+                    class="dropdown-menu rounded-0 m-0 p-2 shadow-lg"
+                    style="
+                      width: max-content;
+                      background-color: #f8f9fa;
+                      border: none;
+                    "
+                  >
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-tshirt me-2"></i> Men's Clothing
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-female me-2"></i> Women's Clothing
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-child me-2"></i> Kids' Clothing
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-shoe-prints me-2"></i> Footwear
+                    </a>
+
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-hat-cowboy me-2"></i> Accessories
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-glasses me-2"></i> Eyewear
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-watch me-2"></i> Watches
+                    </a>
+                    <a
+                      href="#"
+                      class="dropdown-item d-flex align-items-center py-2"
+                    >
+                      <i class="fas fa-gem me-2"></i> Jewelry
+                    </a>
+                  </div>
+                </div>
+
+                <!-- fashion menu end -->
+                <div class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-toggle="dropdown"
+                    >Pages</a
+                  >
+                  <div class="dropdown-menu rounded-0 m-0">
+                    <a href="cart.html" class="dropdown-item">Shopping Cart</a>
+                    <a href="checkout.html" class="dropdown-item">Checkout</a>
+                  </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
     </div>
     <!-- Navbar End -->
 
     <!-- hero area start -->
     <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" style="height: 410px;">
-                    <img class="img-fluid" src="img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 700px;">
-                            <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First
-                                Order</h4>
-                            <h3 class="display-4 text-white font-weight-semi-bold mb-4">Fashionable Dress</h3>
-                            <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item" style="height: 410px;">
-                    <img class="img-fluid" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 700px;">
-                            <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First
-                                Order</h4>
-                            <h3 class="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
-                            <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
-                        </div>
-                    </div>
-                </div>
+      <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="height: 410px">
+            <img class="img-fluid" src="img/carousel-1.jpg" alt="Image" />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 700px">
+                <h4 class="text-light text-uppercase font-weight-medium mb-3">
+                  10% Off Your First Order
+                </h4>
+                <h3 class="display-4 text-white font-weight-semi-bold mb-4">
+                  Fashionable Dress
+                </h3>
+                <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+              </div>
             </div>
-            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-prev-icon mb-n2"></span>
-                </div>
-            </a>
-            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                    <span class="carousel-control-next-icon mb-n2"></span>
-                </div>
-            </a>
+          </div>
+          <div class="carousel-item" style="height: 410px">
+            <img class="img-fluid" src="img/carousel-2.jpg" alt="Image" />
+            <div
+              class="carousel-caption d-flex flex-column align-items-center justify-content-center"
+            >
+              <div class="p-3" style="max-width: 700px">
+                <h4 class="text-light text-uppercase font-weight-medium mb-3">
+                  10% Off Your First Order
+                </h4>
+                <h3 class="display-4 text-white font-weight-semi-bold mb-4">
+                  Reasonable Price
+                </h3>
+                <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+              </div>
+            </div>
+          </div>
         </div>
+        <a
+          class="carousel-control-prev"
+          href="#header-carousel"
+          data-slide="prev"
+        >
+          <div class="btn btn-dark" style="width: 45px; height: 45px">
+            <span class="carousel-control-prev-icon mb-n2"></span>
+          </div>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#header-carousel"
+          data-slide="next"
+        >
+          <div class="btn btn-dark" style="width: 45px; height: 45px">
+            <span class="carousel-control-next-icon mb-n2"></span>
+          </div>
+        </a>
+      </div>
     </div>
     <!-- hero area end -->
 
     <!-- Featured Start -->
     <div class="container-fluid pt-5">
-        <div class="row px-xl-5 pb-3">
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
-                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
-                <div class="d-flex align-items-center border mb-4" style="padding: 30px;">
-                    <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
-                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
-                </div>
-            </div>
+      <div class="row px-xl-5 pb-3">
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+          <div
+            class="d-flex align-items-center border mb-4"
+            style="padding: 30px"
+          >
+            <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+            <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
+          </div>
         </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+          <div
+            class="d-flex align-items-center border mb-4"
+            style="padding: 30px"
+          >
+            <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
+            <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+          <div
+            class="d-flex align-items-center border mb-4"
+            style="padding: 30px"
+          >
+            <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
+            <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+          <div
+            class="d-flex align-items-center border mb-4"
+            style="padding: 30px"
+          >
+            <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
+            <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Featured End -->
 
-
     <!-- Categories Start -->
     <div class="container-fluid pt-5">
-        <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Products Category</span></h2>
-        </div>
-        <div class="container">
-            <div class="category-area category-slider">
-                <div class="px-2">
-                    <div class="product-card" style="height: 220px;">
-                        <div class="product-image">
-                            <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                            <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                            <div class="card-footer card-footer-area d-flex justify-content-center border-0">
-                                <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                        class="fas fa-eye text-dark mr-1"></i>View Detail</a>
-
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h5 class="product-title mt-1">Product Category</h5>
-
-                        </div>
-                    </div>
+      <div class="text-center mb-4">
+        <h2 class="section-title px-5">
+          <span class="px-2">Products Category</span>
+        </h2>
+      </div>
+      <div class="container">
+        <div class="category-area category-slider">
+          <div class="px-2">
+            <div class="product-card" style="height: 220px">
+              <div class="product-image">
+                <img
+                  src="img/gazi_super.png"
+                  class="img-fluid default-img"
+                  alt="Product Image"
+                />
+                <img
+                  src="img/brb_super_open.png"
+                  class="img-fluid hover-img"
+                  alt="Product Image"
+                />
+                <div
+                  class="card-footer card-footer-area d-flex justify-content-center border-0"
+                >
+                  <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                    ><i class="fas fa-eye text-dark mr-1"></i>View Detail</a
+                  >
                 </div>
-
+              </div>
+              <div class="product-info">
+                <h5 class="product-title mt-1">Product Category</h5>
+              </div>
             </div>
+          </div>
         </div>
-
+      </div>
     </div>
     <!-- Categories End -->
 
-
     <!-- Offer Start -->
     <div class="container-fluid offer pt-5">
-        <div class="row px-xl-5">
-            <div class="col-md-6 pb-4">
-                <div class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5">
-                    <img src="img/offer-1.png" alt="">
-                    <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
-                        <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
-                    </div>
-                </div>
+      <div class="row px-xl-5">
+        <div class="col-md-6 pb-4">
+          <div
+            class="position-relative bg-secondary text-center text-md-right text-white mb-2 py-5 px-5"
+          >
+            <img src="img/offer-1.png" alt="" />
+            <div class="position-relative" style="z-index: 1">
+              <h5 class="text-uppercase text-primary mb-3">
+                20% off the all order
+              </h5>
+              <h1 class="mb-4 font-weight-semi-bold">Spring Collection</h1>
+              <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
+                >Shop Now</a
+              >
             </div>
-            <div class="col-md-6 pb-4">
-                <div class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5">
-                    <img src="img/offer-2.png" alt="">
-                    <div class="position-relative" style="z-index: 1;">
-                        <h5 class="text-uppercase text-primary mb-3">20% off the all order</h5>
-                        <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
-                        <a href="" class="btn btn-outline-primary py-md-2 px-md-3">Shop Now</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-md-6 pb-4">
+          <div
+            class="position-relative bg-secondary text-center text-md-left text-white mb-2 py-5 px-5"
+          >
+            <img src="img/offer-2.png" alt="" />
+            <div class="position-relative" style="z-index: 1">
+              <h5 class="text-uppercase text-primary mb-3">
+                20% off the all order
+              </h5>
+              <h1 class="mb-4 font-weight-semi-bold">Winter Collection</h1>
+              <a href="" class="btn btn-outline-primary py-md-2 px-md-3"
+                >Shop Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Offer End -->
 
-
     <!-- Products Start -->
     <div class="container-fluid pt-5">
-        <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Trandy Products</span></h2>
+      <div class="text-center mb-4">
+        <h2 class="section-title px-5">
+          <span class="px-2">Trandy Products</span>
+        </h2>
+      </div>
+      <div class="row pb-3 g-4">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-1">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="img/gazi_super.png"
+                class="img-fluid default-img"
+                alt="Product Image"
+              />
+              <img
+                src="img/brb_super_open.png"
+                class="img-fluid hover-img"
+                alt="Product Image"
+              />
+              <div
+                class="card-footer card-footer-area d-flex justify-content-between border-0"
+              >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-eye text-dark mr-1"></i>View</a
+                >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a
+                >
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="product-pricing">
+                  <span class="new-price">$59.99</span>
+                  <span class="old-price">$79.99</span>
+                </div>
+                <div class="product-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                </div>
+              </div>
+              <h5 class="product-title">Product Title</h5>
+              <p class="product-description m-0">
+                This is a brief description of the product. It should not exceed
+                two lines.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="row pb-3 g-4">
-
-            <div class=" col-lg-3  col-md-4 col-sm-6 col-12 pb-1">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                        <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                        <div class="card-footer card-footer-area d-flex justify-content-between border-0">
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-eye text-dark mr-1"></i>View</a>
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="product-pricing">
-                                <span class="new-price">$59.99</span>
-                                <span class="old-price">$79.99</span>
-                            </div>
-                            <div class="product-rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                        </div>
-                        <h5 class="product-title">Product Title</h5>
-                        <p class="product-description m-0">This is a brief description of the product. It should not
-                            exceed two lines.</p>
-                    </div>
-                </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-1">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="img/gazi_super.png"
+                class="img-fluid default-img"
+                alt="Product Image"
+              />
+              <img
+                src="img/brb_super_open.png"
+                class="img-fluid hover-img"
+                alt="Product Image"
+              />
+              <div
+                class="card-footer card-footer-area d-flex justify-content-between border-0"
+              >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-eye text-dark mr-1"></i>View</a
+                >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a
+                >
+              </div>
             </div>
-            <div class=" col-lg-3  col-md-4 col-sm-6 col-12 pb-1">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                        <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                        <div class="card-footer card-footer-area d-flex justify-content-between border-0">
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-eye text-dark mr-1"></i>View</a>
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="product-pricing">
-                                <span class="new-price">$59.99</span>
-                                <span class="old-price">$79.99</span>
-                            </div>
-                            <div class="product-rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                        </div>
-                        <h5 class="product-title">Product Title</h5>
-                        <p class="product-description m-0">This is a brief description of the product. It should not
-                            exceed two lines.</p>
-                    </div>
+            <div class="product-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="product-pricing">
+                  <span class="new-price">$59.99</span>
+                  <span class="old-price">$79.99</span>
                 </div>
-            </div>
-            <div class=" col-lg-3  col-md-4 col-sm-6 col-12 pb-1">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                        <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                        <div class="card-footer card-footer-area d-flex justify-content-between border-0">
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-eye text-dark mr-1"></i>View</a>
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="product-pricing">
-                                <span class="new-price">$59.99</span>
-                                <span class="old-price">$79.99</span>
-                            </div>
-                            <div class="product-rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                        </div>
-                        <h5 class="product-title">Product Title</h5>
-                        <p class="product-description m-0">This is a brief description of the product. It should not
-                            exceed two lines.</p>
-                    </div>
+                <div class="product-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
                 </div>
+              </div>
+              <h5 class="product-title">Product Title</h5>
+              <p class="product-description m-0">
+                This is a brief description of the product. It should not exceed
+                two lines.
+              </p>
             </div>
-            <div class=" col-lg-3  col-md-4 col-sm-6 col-12 pb-1">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                        <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                        <div class="card-footer card-footer-area d-flex justify-content-between border-0">
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-eye text-dark mr-1"></i>View</a>
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="product-pricing">
-                                <span class="new-price">$59.99</span>
-                                <span class="old-price">$79.99</span>
-                            </div>
-                            <div class="product-rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                        </div>
-                        <h5 class="product-title">Product Title</h5>
-                        <p class="product-description m-0">This is a brief description of the product. It should not
-                            exceed two lines.</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-1">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="img/gazi_super.png"
+                class="img-fluid default-img"
+                alt="Product Image"
+              />
+              <img
+                src="img/brb_super_open.png"
+                class="img-fluid hover-img"
+                alt="Product Image"
+              />
+              <div
+                class="card-footer card-footer-area d-flex justify-content-between border-0"
+              >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-eye text-dark mr-1"></i>View</a
+                >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a
+                >
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="product-pricing">
+                  <span class="new-price">$59.99</span>
+                  <span class="old-price">$79.99</span>
+                </div>
+                <div class="product-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                </div>
+              </div>
+              <h5 class="product-title">Product Title</h5>
+              <p class="product-description m-0">
+                This is a brief description of the product. It should not exceed
+                two lines.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-1">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="img/gazi_super.png"
+                class="img-fluid default-img"
+                alt="Product Image"
+              />
+              <img
+                src="img/brb_super_open.png"
+                class="img-fluid hover-img"
+                alt="Product Image"
+              />
+              <div
+                class="card-footer card-footer-area d-flex justify-content-between border-0"
+              >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-eye text-dark mr-1"></i>View</a
+                >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a
+                >
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="product-pricing">
+                  <span class="new-price">$59.99</span>
+                  <span class="old-price">$79.99</span>
+                </div>
+                <div class="product-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                </div>
+              </div>
+              <h5 class="product-title">Product Title</h5>
+              <p class="product-description m-0">
+                This is a brief description of the product. It should not exceed
+                two lines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Products End -->
-
 
     <!-- Subscribe Start -->
     <div class="container-fluid bg-secondary my-5">
-        <div class="row justify-content-md-center py-5 px-xl-5">
-            <div class="col-md-6 col-12 py-5">
-                <div class="text-center mb-2 pb-2">
-                    <h2 class="section-title px-5 mb-3"><span class="bg-secondary px-2">Stay Updated</span></h2>
-                    <p>Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam labore at justo ipsum eirmod
-                        duo labore labore.</p>
-                </div>
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-white p-4" placeholder="Email Goes Here">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Subscribe</button>
-                        </div>
-                    </div>
-                </form>
+      <div class="row justify-content-md-center py-5 px-xl-5">
+        <div class="col-md-6 col-12 py-5">
+          <div class="text-center mb-2 pb-2">
+            <h2 class="section-title px-5 mb-3">
+              <span class="bg-secondary px-2">Stay Updated</span>
+            </h2>
+            <p>
+              Amet lorem at rebum amet dolores. Elitr lorem dolor sed amet diam
+              labore at justo ipsum eirmod duo labore labore.
+            </p>
+          </div>
+          <form action="">
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control border-white p-4"
+                placeholder="Email Goes Here"
+              />
+              <div class="input-group-append">
+                <button class="btn btn-primary px-4">Subscribe</button>
+              </div>
             </div>
+          </form>
         </div>
+      </div>
     </div>
     <!-- Subscribe End -->
 
-
     <!-- Products Start -->
     <div class="container-fluid pt-5">
-        <div class="text-center mb-4">
-            <h2 class="section-title px-5"><span class="px-2">Just Arrived</span></h2>
+      <div class="text-center mb-4">
+        <h2 class="section-title px-5">
+          <span class="px-2">Just Arrived</span>
+        </h2>
+      </div>
+      <div class="row pb-3 g-4">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-1">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="img/gazi_super.png"
+                class="img-fluid default-img"
+                alt="Product Image"
+              />
+              <img
+                src="img/brb_super_open.png"
+                class="img-fluid hover-img"
+                alt="Product Image"
+              />
+              <div
+                class="card-footer card-footer-area d-flex justify-content-between border-0"
+              >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-eye text-dark mr-1"></i>View</a
+                >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a
+                >
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="product-pricing">
+                  <span class="new-price">$59.99</span>
+                  <span class="old-price">$79.99</span>
+                </div>
+                <div class="product-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                </div>
+              </div>
+              <h5 class="product-title">Product Title</h5>
+              <p class="product-description m-0">
+                This is a brief description of the product. It should not exceed
+                two lines.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="row pb-3 g-4">
-
-            <div class="col-lg-3  col-md-4 col-sm-6 col-12 pb-1">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                        <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                        <div class="card-footer card-footer-area d-flex justify-content-between border-0">
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-eye text-dark mr-1"></i>View</a>
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="product-pricing">
-                                <span class="new-price">$59.99</span>
-                                <span class="old-price">$79.99</span>
-                            </div>
-                            <div class="product-rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                        </div>
-                        <h5 class="product-title">Product Title</h5>
-                        <p class="product-description m-0">This is a brief description of the product. It should not
-                            exceed two lines.</p>
-                    </div>
-                </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-1">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="img/gazi_super.png"
+                class="img-fluid default-img"
+                alt="Product Image"
+              />
+              <img
+                src="img/brb_super_open.png"
+                class="img-fluid hover-img"
+                alt="Product Image"
+              />
+              <div
+                class="card-footer card-footer-area d-flex justify-content-between border-0"
+              >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-eye text-dark mr-1"></i>View</a
+                >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a
+                >
+              </div>
             </div>
-            <div class="col-lg-3  col-md-4 col-sm-6 col-12 pb-1">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                        <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                        <div class="card-footer card-footer-area d-flex justify-content-between border-0">
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-eye text-dark mr-1"></i>View</a>
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="product-pricing">
-                                <span class="new-price">$59.99</span>
-                                <span class="old-price">$79.99</span>
-                            </div>
-                            <div class="product-rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                        </div>
-                        <h5 class="product-title">Product Title</h5>
-                        <p class="product-description m-0">This is a brief description of the product. It should not
-                            exceed two lines.</p>
-                    </div>
+            <div class="product-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="product-pricing">
+                  <span class="new-price">$59.99</span>
+                  <span class="old-price">$79.99</span>
                 </div>
-            </div>
-            <div class="col-lg-3  col-md-4 col-sm-6 col-12 pb-1">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                        <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                        <div class="card-footer card-footer-area d-flex justify-content-between border-0">
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-eye text-dark mr-1"></i>View</a>
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="product-pricing">
-                                <span class="new-price">$59.99</span>
-                                <span class="old-price">$79.99</span>
-                            </div>
-                            <div class="product-rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                        </div>
-                        <h5 class="product-title">Product Title</h5>
-                        <p class="product-description m-0">This is a brief description of the product. It should not
-                            exceed two lines.</p>
-                    </div>
+                <div class="product-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
                 </div>
+              </div>
+              <h5 class="product-title">Product Title</h5>
+              <p class="product-description m-0">
+                This is a brief description of the product. It should not exceed
+                two lines.
+              </p>
             </div>
-            <div class="col-lg-3  col-md-4 col-sm-6 col-12 pb-1">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="img/gazi_super.png" class="img-fluid default-img" alt="Product Image">
-                        <img src="img/brb_super_open.png" class="img-fluid hover-img" alt="Product Image">
-                        <div class="card-footer card-footer-area d-flex justify-content-between border-0">
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-eye text-dark mr-1"></i>View</a>
-                            <a href="#" class="btn btn-sm text-dark p-0 hover-link"><i
-                                    class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a>
-                        </div>
-                    </div>
-                    <div class="product-info">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="product-pricing">
-                                <span class="new-price">$59.99</span>
-                                <span class="old-price">$79.99</span>
-                            </div>
-                            <div class="product-rating">
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9733;</span>
-                                <span class="star">&#9734;</span>
-                            </div>
-                        </div>
-                        <h5 class="product-title">Product Title</h5>
-                        <p class="product-description m-0">This is a brief description of the product. It should not
-                            exceed two lines.</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-1">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="img/gazi_super.png"
+                class="img-fluid default-img"
+                alt="Product Image"
+              />
+              <img
+                src="img/brb_super_open.png"
+                class="img-fluid hover-img"
+                alt="Product Image"
+              />
+              <div
+                class="card-footer card-footer-area d-flex justify-content-between border-0"
+              >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-eye text-dark mr-1"></i>View</a
+                >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a
+                >
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="product-pricing">
+                  <span class="new-price">$59.99</span>
+                  <span class="old-price">$79.99</span>
+                </div>
+                <div class="product-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                </div>
+              </div>
+              <h5 class="product-title">Product Title</h5>
+              <p class="product-description m-0">
+                This is a brief description of the product. It should not exceed
+                two lines.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 pb-1">
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="img/gazi_super.png"
+                class="img-fluid default-img"
+                alt="Product Image"
+              />
+              <img
+                src="img/brb_super_open.png"
+                class="img-fluid hover-img"
+                alt="Product Image"
+              />
+              <div
+                class="card-footer card-footer-area d-flex justify-content-between border-0"
+              >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-eye text-dark mr-1"></i>View</a
+                >
+                <a href="#" class="btn btn-sm text-dark p-0 hover-link"
+                  ><i class="fas fa-shopping-cart text-dark mr-1"></i>Buy</a
+                >
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="product-pricing">
+                  <span class="new-price">$59.99</span>
+                  <span class="old-price">$79.99</span>
+                </div>
+                <div class="product-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9734;</span>
+                </div>
+              </div>
+              <h5 class="product-title">Product Title</h5>
+              <p class="product-description m-0">
+                This is a brief description of the product. It should not exceed
+                two lines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Products End -->
 
-
     <!-- Vendor Start -->
     <div class="container-fluid py-5">
-        <div class="row px-xl-5">
-            <div class="col">
-                <div class="owl-carousel vendor-carousel">
-                    <div class="vendor-item border p-4">
-                        <img src="img/vendor-1.jpg" alt="">
-                    </div>
-                    <div class="vendor-item border p-4">
-                        <img src="img/vendor-2.jpg" alt="">
-                    </div>
-                    <div class="vendor-item border p-4">
-                        <img src="img/vendor-3.jpg" alt="">
-                    </div>
-                    <div class="vendor-item border p-4">
-                        <img src="img/vendor-4.jpg" alt="">
-                    </div>
-                    <div class="vendor-item border p-4">
-                        <img src="img/vendor-5.jpg" alt="">
-                    </div>
-                    <div class="vendor-item border p-4">
-                        <img src="img/vendor-6.jpg" alt="">
-                    </div>
-                    <div class="vendor-item border p-4">
-                        <img src="img/vendor-7.jpg" alt="">
-                    </div>
-                    <div class="vendor-item border p-4">
-                        <img src="img/vendor-8.jpg" alt="">
-                    </div>
-                </div>
+      <div class="row px-xl-5">
+        <div class="col">
+          <div class="owl-carousel vendor-carousel">
+            <div class="vendor-item border p-4">
+              <img src="img/vendor-1.jpg" alt="" />
             </div>
+            <div class="vendor-item border p-4">
+              <img src="img/vendor-2.jpg" alt="" />
+            </div>
+            <div class="vendor-item border p-4">
+              <img src="img/vendor-3.jpg" alt="" />
+            </div>
+            <div class="vendor-item border p-4">
+              <img src="img/vendor-4.jpg" alt="" />
+            </div>
+            <div class="vendor-item border p-4">
+              <img src="img/vendor-5.jpg" alt="" />
+            </div>
+            <div class="vendor-item border p-4">
+              <img src="img/vendor-6.jpg" alt="" />
+            </div>
+            <div class="vendor-item border p-4">
+              <img src="img/vendor-7.jpg" alt="" />
+            </div>
+            <div class="vendor-item border p-4">
+              <img src="img/vendor-8.jpg" alt="" />
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Vendor End -->
 
-
     <!-- Footer Start -->
     <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
-        <div class="row px-xl-5 pt-5">
-            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-                <a href="" class="text-decoration-none mb-4">
-                    <img style="width: 120px;" src="img/logo.png" alt="">
-                </a>
-                <p>Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no sit erat lorem et magna ipsum
-                    dolore amet erat.</p>
-                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>Baradaho, Saidpur, Nilphamari</p>
-                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>bsptraders@gmail.com</p>
-                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+01632855405</p>
+      <div class="row px-xl-5 pt-5">
+        <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+          <a href="" class="text-decoration-none mb-4">
+            <img style="width: 120px" src="img/logo.png" alt="" />
+          </a>
+          <p>
+            Dolore erat dolor sit lorem vero amet. Sed sit lorem magna, ipsum no
+            sit erat lorem et magna ipsum dolore amet erat.
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt text-primary mr-3"></i>Baradaho,
+            Saidpur, Nilphamari
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope text-primary mr-3"></i>bsptraders@gmail.com
+          </p>
+          <p class="mb-0">
+            <i class="fa fa-phone-alt text-primary mr-3"></i>+01632855405
+          </p>
+        </div>
+        <div class="col-lg-8 col-md-12">
+          <div class="row">
+            <div class="col-md-4 mb-5">
+              <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+              <div class="d-flex flex-column justify-content-start">
+                <a class="text-dark mb-2" href="#"
+                  ><i class="fa fa-angle-right mr-2"></i>FAQs</a
+                >
+                <a class="text-dark mb-2" href="#"
+                  ><i class="fa fa-angle-right mr-2"></i>Help</a
+                >
+                <a class="text-dark mb-2" href="#"
+                  ><i class="fa fa-angle-right mr-2"></i>Supports</a
+                >
+              </div>
             </div>
-            <div class="col-lg-8 col-md-12">
-                <div class="row">
-                    <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
-                            <a class="text-dark mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Help</a>
-                            <a class="text-dark mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Supports</a>
-
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                            <a class="text-dark mb-2" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our
-                                Shop</a>
-                            <a class="text-dark mb-2" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop
-                                Detail</a>
-                            <a class="text-dark mb-2" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping
-                                Cart</a>
-                            <a class="text-dark mb-2" href="checkout.html"><i
-                                    class="fa fa-angle-right mr-2"></i>Checkout</a>
-                            <a class="text-dark" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact
-                                Us</a>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
-                        <form action="">
-                            <div class="form-group">
-                                <input type="text" class="form-control border-0 py-4" placeholder="Your Name"
-                                    required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 py-4" placeholder="Your Email"
-                                    required="required" />
-                            </div>
-                            <div>
-                                <button class="btn btn-primary btn-block border-0 py-3" type="submit">Subscribe
-                                    Now</button>
-                            </div>
-                        </form>
-                    </div>
+            <div class="col-md-4 mb-5">
+              <h5 class="font-weight-bold text-dark mb-4">Quick Links</h5>
+              <div class="d-flex flex-column justify-content-start">
+                <a class="text-dark mb-2" href="index.html"
+                  ><i class="fa fa-angle-right mr-2"></i>Home</a
+                >
+                <a class="text-dark mb-2" href="shop.html"
+                  ><i class="fa fa-angle-right mr-2"></i>Our Shop</a
+                >
+                <a class="text-dark mb-2" href="detail.html"
+                  ><i class="fa fa-angle-right mr-2"></i>Shop Detail</a
+                >
+                <a class="text-dark mb-2" href="cart.html"
+                  ><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a
+                >
+                <a class="text-dark mb-2" href="checkout.html"
+                  ><i class="fa fa-angle-right mr-2"></i>Checkout</a
+                >
+                <a class="text-dark" href="contact.html"
+                  ><i class="fa fa-angle-right mr-2"></i>Contact Us</a
+                >
+              </div>
+            </div>
+            <div class="col-md-4 mb-5">
+              <h5 class="font-weight-bold text-dark mb-4">Newsletter</h5>
+              <form action="">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control border-0 py-4"
+                    placeholder="Your Name"
+                    required="required"
+                  />
                 </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control border-0 py-4"
+                    placeholder="Your Email"
+                    required="required"
+                  />
+                </div>
+                <div>
+                  <button
+                    class="btn btn-primary btn-block border-0 py-3"
+                    type="submit"
+                  >
+                    Subscribe Now
+                  </button>
+                </div>
+              </form>
             </div>
+          </div>
         </div>
-        <div class="row border-top border-light mx-xl-5 py-4">
-            <div class="col-md-6 px-xl-0">
-                <p class="mb-md-0 text-center text-md-left text-dark">
-                    &copy; <a class="text-dark font-weight-semi-bold" href="#">www.bsptraders.com</a>. All Rights
-                    Reserved.
-                    Designed
-                    by <a href="https://bspdigitalsolutions.com" target="_blank">BSP Digital solutions</a>
-                </p>
-            </div>
-            <div class="col-md-6 px-xl-0 text-center text-md-right">
-                <img class="img-fluid" src="img/payments.png" alt="">
-            </div>
+      </div>
+      <div class="row border-top border-light mx-xl-5 py-4">
+        <div class="col-md-6 px-xl-0">
+          <p class="mb-md-0 text-center text-md-left text-dark">
+            &copy;
+            <a class="text-dark font-weight-semi-bold" href="#"
+              >www.bsptraders.com</a
+            >. All Rights Reserved. Designed by
+            <a href="https://bspdigitalsolutions.com" target="_blank"
+              >BSP Digital solutions</a
+            >
+          </p>
         </div>
+        <div class="col-md-6 px-xl-0 text-center text-md-right">
+          <img class="img-fluid" src="img/payments.png" alt="" />
+        </div>
+      </div>
     </div>
     <!-- social icon area start -->
     <div class="social-icons">
-        <a class="facebook" href="#" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a class="twitter" href="#" target="_blank">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a class="linkedin" href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a class="instagram" href="#" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a class="youtube" href="#" target="_blank">
-            <i class="fab fa-youtube"></i>
-        </a>
+      <a class="facebook" href="#" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="twitter" href="#" target="_blank">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="linkedin" href="#" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a class="instagram" href="#" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="youtube" href="#" target="_blank">
+        <i class="fab fa-youtube"></i>
+      </a>
     </div>
     <!-- social icon area start -->
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
+    <a href="#" class="btn btn-primary back-to-top"
+      ><i class="fa fa-angle-double-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -858,6 +1191,5 @@
     <script src="lib/slick/slick.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
