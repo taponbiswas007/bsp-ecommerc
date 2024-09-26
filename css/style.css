@@ -9878,7 +9878,7 @@ a.text-dark:hover, a.text-dark:focus {
 /* top offer area start */
 .ads-and-offer{
   height: 60px;
-  background: url(/img/offer-bg.png);
+  background: url(../img/ads-bg.png) no-repeat 0 0 / 100% 100%;
   background-position: center;
 }
 .ads-and-offer p{
@@ -10130,7 +10130,7 @@ a.text-dark:hover, a.text-dark:focus {
 /* Main Offer Banner Styling */
 .new-offer-banner {
   position: relative;
-  background-image: url('../img/offer-2.png');
+  background-image: url('../img/offer-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10203,6 +10203,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #e63946;
   box-shadow: 0px 6px 15px rgba(255, 69, 0, 0.7); /* Stronger shadow on hover */
   transform: translateY(-5px); /* Lift effect */
+  color: #ffffff !important;
 }
 
 
