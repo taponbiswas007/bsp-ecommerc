@@ -10229,9 +10229,7 @@ a.text-dark:hover, a.text-dark:focus {
   position: absolute;
   height: 100%;
   width: 100%;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  object-fit: fill;
   
 }
 
